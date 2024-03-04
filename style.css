@@ -4,24 +4,35 @@
   box-sizing: border-box;
 }
 
+
+
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/MoonStars.svg);
+  --texto: url(./assets/fundo.gif);
+  --shadow-text: #0ff 1px 0px 10px;
+  --bold: bold;
+  
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.png) no-repeat;
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/Sun.svg);
+  --texto: url(./assets/fundo1.gif) ;
+  --cor-texto: rgb(0, 0, 0);
+  --shadow-text: #66f 1px 1px 10px;
+  --texto-cor: black;
+  --bold: bold;
 }
 
 body {
@@ -30,6 +41,7 @@ body {
 }
 
 body * {
+  font-weight: var(--bold);
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
@@ -52,10 +64,22 @@ body * {
 }
 
 #profile p {
+  font-weight: var(--bold); 
+  display: block;
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+  margin: 4px auto;
+  
+  
+  width: 100px;
+  text-shadow: var(--shadow-text) ;
+  color: var(--cor-texto);
+  font-weight: bold; 
+  color: var(--texto-cor);
+  background-image: var(--texto);
 }
+
 
 /* switch */
 #switch {
@@ -103,7 +127,7 @@ body * {
 /* links */
 ul {
   list-style: none;
-
+  font-weight: var(--bold); 
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -112,6 +136,7 @@ ul {
 }
 
 ul li a {
+  font-weight: var(--bold); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,12 +190,13 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+  font-weight: var(--bold); 
 }
-
+/*url(./assets/bg-desktop.jpg)*/
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg.png);
   }
 
   .light {
